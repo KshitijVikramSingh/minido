@@ -7,14 +7,6 @@ import './signinmodal.css';
 function SignInModal(props) {
     const [error, setError] = useState(false);
 
-    const buttonStyles = {
-        minWidth: "180px",
-        height: "45px",
-        marginBottom: "10px",
-        marginTop: "10px",
-        float: "right",
-    }
-
     const googleSignin = () => {
         var provider = new firebase.auth.GoogleAuthProvider();
 
@@ -38,7 +30,7 @@ function SignInModal(props) {
                 </Modal.Header>
                 <Modal.Body>
                     <div className="buttons" style={{marginTop: '10px', marginBottom: '10px', width: 'max-content', minWidth: '360px', marginLeft: 'auto', marginRight : 'auto'}}>
-                        <Button onClick={() => googleSignin()} style = {buttonStyles, {width: '100%', borderRadius: '10px', height: '45px'}} variant="danger">
+                        <Button onClick={() => googleSignin()} style = {{width: '100%', borderRadius: '10px', height: '45px'}} variant="danger">
                             <p className="buttonText"> <i class="bi bi-google" style={{margin: 'auto 10px'}}/> Continue With Google</p>
                         </Button>
                     </div>
